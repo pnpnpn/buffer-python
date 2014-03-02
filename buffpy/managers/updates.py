@@ -99,7 +99,7 @@ class Updates(list):
     return self.api.post(url=url, data=post_data)
 
   #TODO: Multiple profile posting
-  def new(self, text, shorten=None, now=None, top=None, media=None, scheduled_at=None):
+  def new(self, text, shorten=None, now=None, top=None, media=None, when=None):
     '''
       Create one or more new status updates.
     '''
@@ -117,10 +117,10 @@ class Updates(list):
 
     if top:
       post_data += "top=%s&" % top
-      
-	if scheduled_at:
-			post_data+="scheduled_at=%s&" % scheduled_at
-			
+
+    if when:
+      post_data += "scheduled_at=%s&" % str(when)
+
     if media:
       media_format = "media[%s]=%s&"
 
