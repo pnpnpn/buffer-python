@@ -9,13 +9,13 @@ requires_list = [
     'requests==1.2.3',
 ]
 
-setup(name='buffpy',
+setup(name='buffer-python',
       version='1.07',
       platforms='any',
       description='Python library for Buffer App',
       author='Vlad Temian',
       author_email='vladtemian@gmail.com',
-      url='https://github.com/vtemian/buffpy',
+      url='https://github.com/bufferapp/buffer-python',
       packages=['buffpy'],
       include_package_data=True,
       install_requires=requires_list,
