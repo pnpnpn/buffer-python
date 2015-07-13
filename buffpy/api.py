@@ -49,9 +49,8 @@ class API(object):
     headers = {'Content-Type': 'application/x-www-form-urlencoded'}
 
     #Check if posting data and if data is unicode, encoding it as utf-8
-    if 'data' in params and isinstance(params['data'], unicode):
-      params['data'] = params['data'].encode('utf-8')
-
+    #if 'data' in params and isinstance(params['data'], str):
+    #  params['data'] = params['data'].encode('utf-8')
 
     response = self.session.post(url=BASE_URL % url, headers=headers, **params)
 
