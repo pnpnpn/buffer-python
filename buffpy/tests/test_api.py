@@ -85,7 +85,7 @@ def test_api_info():
     mocked_session = MagicMock()
 
     mocked_response = MagicMock()
-    mocked_response.content = json.dumps({'status': 'ok'})
+    mocked_response.json.return_value = {'status': 'ok'}
     mocked_session.get.return_value = mocked_response
 
     mocked_oauth2.return_value = mocked_session
